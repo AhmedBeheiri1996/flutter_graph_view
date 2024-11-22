@@ -20,6 +20,8 @@ class Vertex<I> {
   /// 节点首个标签
   late String tag;
 
+  String? avatarUrl;
+
   /// All the tags of vertex.
   /// 节点所有标签
   List<String>? tags;
