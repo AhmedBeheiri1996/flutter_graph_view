@@ -24,9 +24,9 @@ class MapConvertor extends DataConvertor<Map, Map> {
     vertex.tag = v['tag'];
     vertex.tags = v['tags'];
     vertex.data = v['data'];
-    if (v['avatarUrl'] != null) {
-      vertex.avatarUrl = v['avatarUrl'];
-    }
+
+    vertex.avatarUrl = v['avatarUrl'];
+
     return vertex;
   }
 
