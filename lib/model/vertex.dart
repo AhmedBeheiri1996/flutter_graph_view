@@ -21,6 +21,7 @@ class Vertex<I> {
   late String tag;
 
   String? avatarUrl;
+  late VertexType type;
 
   /// All the tags of vertex.
   /// 节点所有标签
@@ -87,6 +88,7 @@ class Vertex<I> {
   late dynamic data;
 
   double _radius = 5;
+
   set radius(double radius) => _radius = radius;
 
   /// The radius of this vertex, that which assigment by StyleConfiguration.
@@ -146,5 +148,26 @@ class Vertex<I> {
     var vc = v.position - position;
     var bc = b.position - position;
     return vc.angleTo(bc);
+  }
+}
+
+enum VertexType {
+  base,
+  user,
+  interest,
+}
+
+extension VertexTypeExtension on VertexType {
+  static VertexType fromString(String type) {
+    switch (type) {
+      case 'base':
+        return VertexType.base;
+      case 'user':
+        return VertexType.user;
+      case 'interest':
+        return VertexType.interest;
+      default:
+        return VertexType.interest;
+    }
   }
 }
