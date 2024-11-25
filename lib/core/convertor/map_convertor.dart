@@ -27,7 +27,7 @@ class MapConvertor extends DataConvertor<Map, Map> {
     vertex.data = v['data'];
 
     vertex.avatarUrl = v['avatarUrl'];
-    vertex.iconData = v['iconData'] != null ? IconData(v['iconData']) : null;
+    vertex.iconData = v['iconData'] != null ? v['iconData'] as IconData : null;
     vertex.type = VertexTypeExtension.fromString(v['type']);
 
     return vertex;
