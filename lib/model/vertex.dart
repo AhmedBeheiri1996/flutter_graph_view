@@ -21,6 +21,7 @@ class Vertex<I> {
   late String tag;
 
   String? avatarUrl;
+  IconData? iconData;
   late VertexType type;
 
   /// All the tags of vertex.

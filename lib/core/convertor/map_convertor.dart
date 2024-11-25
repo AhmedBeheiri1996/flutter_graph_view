@@ -2,6 +2,7 @@
 //
 // This source code is licensed under Apache 2.0 License.
 
+import 'package:flutter/material.dart';
 import 'package:flutter_graph_view/flutter_graph_view.dart';
 
 ///
@@ -26,6 +27,7 @@ class MapConvertor extends DataConvertor<Map, Map> {
     vertex.data = v['data'];
 
     vertex.avatarUrl = v['avatarUrl'];
+    vertex.iconData = v['iconData'] != null ? IconData(v['iconData']) : null;
     vertex.type = VertexTypeExtension.fromString(v['type']);
 
     return vertex;

@@ -109,6 +109,7 @@ class GraphComponent extends FlameGame
         options: options,
         graphComponent: this,
         avatarUrl: vertex.avatarUrl,
+        iconData: vertex.iconData,
       )..scaleNotifier = scale;
       vertex.cpn = vc;
       world.add(vc);

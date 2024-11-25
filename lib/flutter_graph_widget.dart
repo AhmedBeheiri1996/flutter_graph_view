@@ -16,12 +16,12 @@ class FlutterGraphWidget extends StatefulWidget {
   final Options? options;
 
   const FlutterGraphWidget({
-    Key? key,
+    super.key,
     required this.data,
     required this.convertor,
     required this.algorithm,
     this.options,
-  }) : super(key: key);
+  });
 
   @override
   State<FlutterGraphWidget> createState() => _FlutterGraphWidgetState();
