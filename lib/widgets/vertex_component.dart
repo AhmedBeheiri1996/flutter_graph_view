@@ -30,12 +30,14 @@ class VertexComponent extends ShapeComponent
   Options? options;
   GraphComponent? graphComponent;
   ShapeHitbox? hitBox;
+  String? avatarUrl;
 
   VertexComponent(
     this.vertex,
     this.graph,
     this.context,
     this.algorithm, {
+    this.avatarUrl,
     this.options,
     this.graphComponent,
   }) : super(

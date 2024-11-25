@@ -108,6 +108,7 @@ class GraphComponent extends FlameGame
         algorithm,
         options: options,
         graphComponent: this,
+        avatarUrl: vertex.avatarUrl,
       )..scaleNotifier = scale;
       vertex.cpn = vc;
       world.add(vc);
@@ -389,7 +390,8 @@ class GraphComponent extends FlameGame
                           child: ColoredBox(
                             color: Colors.grey.withOpacity(0.1),
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(16, 12, 0, 12),
+                              padding:
+                                  const EdgeInsets.fromLTRB(16, 12, 0, 12),
                               child: Column(
                                 children: algorithm.verticalOverlays(
                                       world: world,
