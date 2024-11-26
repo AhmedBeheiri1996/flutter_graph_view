@@ -154,7 +154,6 @@ class VertexComponent extends ShapeComponent
   void onTapDown(TapDownEvent event) {
     options?.onVertexTapDown?.call(vertex, event);
     event.handled = true;
-    isTapped = true;
   }
 
   @override
@@ -162,7 +161,6 @@ class VertexComponent extends ShapeComponent
     var graphData = options?.onVertexTapUp?.call(vertex, event);
     _refresh(graphData);
     event.handled = true;
-    isTapped = false;
   }
 
   @override
