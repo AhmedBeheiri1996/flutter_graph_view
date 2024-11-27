@@ -84,7 +84,8 @@ class Options {
   /// @en: event callback when tap down on vertex.
   ///
   /// @zh: 点下顶点时的回调
-  dynamic Function(Vertex vertex, TapDownEvent)? onVertexTapDown;
+  dynamic Function(Vertex vertex, TapDownEvent, List<Vertex> vertexs)?
+      onVertexTapDown;
 
   /// @en: event callback when tap up on vertex.
   ///
@@ -125,7 +126,8 @@ class Options {
   ///
   /// @zh: 图例组件
   PositionComponent Function(Color color, int i) legendBuilder = (color, i) {
-    return RectangleComponent.fromRect(Rect.fromLTWH(40, 50.0 + 30 * i, 30, 18),
+    return RectangleComponent.fromRect(
+        Rect.fromLTWH(40, 50.0 + 30 * i, 30, 18),
         paint: Paint()..color = color);
   };
 

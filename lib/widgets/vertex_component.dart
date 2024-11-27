@@ -152,7 +152,11 @@ class VertexComponent extends ShapeComponent
 
   @override
   void onTapDown(TapDownEvent event) {
-    options?.onVertexTapDown?.call(vertex, event);
+    options?.onVertexTapDown?.call(
+      vertex,
+      event,
+      graph.vertexes,
+    );
     event.handled = true;
   }
 
