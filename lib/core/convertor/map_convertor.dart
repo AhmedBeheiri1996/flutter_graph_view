@@ -50,6 +50,7 @@ class MapConvertor extends DataConvertor<Map, Map> {
 
     result.start = g.keyCache[e['srcId']]!;
     result.end = g.keyCache[e['dstId']];
+    result.colors = e['colors'] ?? [];
 
     return result;
   }
